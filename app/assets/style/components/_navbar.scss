@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  padding: ($space * 3) ($space * 11);
+  flex-wrap: wrap;
+  align-items: center;
+}
+.navbar-brand {
+  margin-top: $space * 2;
+  margin-bottom: $space * 2;
+}
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-link {
+  display: block;
+  padding: ($space * 2) ($space * 4);
+  text-align: center;
+}
+
+@include pad {
+  .navbar {
+    padding-left: $space * 5;
+    padding-right: $space * 5;
+  }
+}
+@include mobile {
+  .navbar {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar-brand {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar-nav {
+    width: 100%;
+  }
+  .nav-item {
+    width: 50%;
+  }
+  .nav-link {
+    font-size: $fs-default * 1.25;
+  }
+}
